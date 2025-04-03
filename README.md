@@ -1,22 +1,61 @@
-# React + TypeScript + Vite
+# Ping Pong Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive **Ping Pong Game** built using **React, TypeScript, and Vite**. This game allows players to enjoy classic Pong gameplay with smooth animations and responsive controls.
 
-Currently, two official plugins are available:
+## 🚀 Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Check out the live demo here: **[Play Now](https://pponggame.netlify.app/)**
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React** (with Vite for fast development)
+- **TypeScript** (for type safety and better developer experience)
+- **CSS** (for styling and animations)
 
-- Configure the top-level `parserOptions` property like this:
+## 📂 Features
+
+✅ **Single-Player Mode** (AI opponent)  
+✅ **Smooth Animations** with `requestAnimationFrame`  
+✅ **Keyboard Controls** (Arrow keys / WASD)  
+✅ **Collision Detection** (Ball bounces off paddles and walls)  
+✅ **Score Tracking** (Win by reaching the score limit)  
+✅ **Responsive Design** (Works on all screen sizes)  
+✅ **Fast Refresh with Vite**  
+
+## 📌 Installation
+
+Follow these steps to set up the project locally:
+
+```sh
+# Clone the repository
+git clone https://github.com/ManojKumar15NS/ping-pong.git
+
+# Navigate to the project directory
+cd ping-pong
+
+# Install dependencies
+yarn install  # or npm install
+
+# Start the development server
+yarn dev  # or npm run dev
+```
+
+The game should now be running at `http://localhost:5173/` by default.
+
+## 🎮 Controls
+
+| Key | Action |
+|---|---|
+| `W / Up Arrow` | Move paddle up |
+| `S / Down Arrow` | Move paddle down |
+
+## 📜 ESLint Configuration
+
+For better code quality, the project uses ESLint with TypeScript rules. To enhance linting, update the configuration as follows:
 
 ```js
 export default tseslint.config({
   languageOptions: {
-    // other options...
     parserOptions: {
       project: ['./tsconfig.node.json', './tsconfig.app.json'],
       tsconfigRootDir: import.meta.dirname,
@@ -25,26 +64,26 @@ export default tseslint.config({
 })
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Additionally, install `eslint-plugin-react` and update the configuration in `eslint.config.js`:
 
 ```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+import react from 'eslint-plugin-react';
 
 export default tseslint.config({
-  // Set the react version
   settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
+  plugins: { react },
   rules: {
-    // other rules...
-    // Enable its recommended rules
     ...react.configs.recommended.rules,
     ...react.configs['jsx-runtime'].rules,
   },
-})
+});
 ```
+
+## 📜 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+🎉 **Enjoy playing Ping Pong!** 🚀
+
