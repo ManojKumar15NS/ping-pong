@@ -22,7 +22,7 @@ Check out the live demo here: **[Play Now](https://pponggame.netlify.app/)**
 ✅ **Responsive Design** (Works on all screen sizes)  
 ✅ **Fast Refresh with Vite**  
 
-## 📌 Installation
+## 📌Installation
 
 Follow these steps to set up the project locally:
 
